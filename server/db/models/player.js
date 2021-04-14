@@ -1,0 +1,15 @@
+const Sequelize = require("sequelize");
+const db = require("../db");
+
+const Player = db.define("players", {
+  name: {
+    type: Sequelize.TEXT,
+  },
+  image: {
+    type: Sequelize.STRING,
+    defaultValue:
+      "https://res.cloudinary.com/dsi0jbonx/image/upload/v1607142040/present_kjqse1.jpg",
+  },
+});
+
+module.exports = Player;
