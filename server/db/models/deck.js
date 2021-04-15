@@ -14,14 +14,14 @@ const Deck = db.define("decks", {
     defaultValue:
       "https://res.cloudinary.com/dsi0jbonx/image/upload/v1607142040/present_kjqse1.jpg",
   },
-  //   points: {
-  //     type: Sequelize.INTEGER,
-  //     defaultValue: 0,
-  //   },
-  //   TournPlayed: {
-  //     type: Sequelize.INTEGER,
-  //     defaultValue: 0,
-  //   },
+  points: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0,
+  },
+  TournPlayed: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0,
+  },
 });
 
 module.exports = Deck;
