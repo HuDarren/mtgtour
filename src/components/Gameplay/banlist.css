@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: bisque;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30%;
+  font-size: large;
+  font-weight: 700;
+  margin-top: 5%;
+}
+
+.text-container {
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
+
+p {
+  color: black;
+}
