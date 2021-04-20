@@ -4,8 +4,11 @@ const Player = require("./player");
 
 // -------Associations --------------
 
+Deck.belongsTo(Player);
 Player.hasMany(Deck);
+
 Deck.belongsTo(Tournament);
+Tournament.hasMany(Deck);
 
 //------------------------------------
 
