@@ -20,10 +20,10 @@ function Navbar() {
           <i class="fa fa-caret-down"></i>
         </button>
         <div className="dropdown-content">
-          <Link className="dropdown-contenta" to="/">
+          <Link className="dropdown-contenta" to="/singles">
             Singles
           </Link>
-          <Link className="dropdown-contenta" to="/">
+          <Link className="dropdown-contenta" to="/doubles">
             Doubles
           </Link>
         </div>

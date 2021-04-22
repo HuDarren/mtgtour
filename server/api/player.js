@@ -1,13 +1,20 @@
 const router = require("express").Router();
-const { Player } = require("../db/models");
+const { Player, Deck } = require("../db/models");
 module.exports = router;
 
-// get all user information
-router.get("/", async (req, res, next) => {
+// get user by id
+
+router.get("/:id", async (req, res, next) => {
   try {
-    // const players = await Player.findAll({});
-    res.json(console.log("hello"));
-  } catch (err) {
-    next(err);
+    const playerId = req.params.id;
+    const userData = await Player.findAll({
+      where: {
+        id: playerId,
+      },
+      include: { model: Deck },
+    });
+    res.json(userData);
+  } catch (error) {
+    next(error);
   }
 });
