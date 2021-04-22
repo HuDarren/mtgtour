@@ -1,0 +1,56 @@
+#players {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* border: 3px solid #ddd; */
+  width: 94%;
+  color: white;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+#players td,
+#players th {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+}
+
+#players tr:nth-child(odd) {
+  background-color: #0f1218;
+}
+
+#players tr:hover {
+  background-color: rgb(100, 105, 73);
+}
+
+#players th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #181c25;
+  color: white;
+}
+
+#title {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+.rankImage {
+  width: 80px;
+  height: 50px;
+}
+
+.label-container {
+  padding: 5% 3% 5% 3%;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-bottom: 20px;
+  color: #ddd;
+  background-color: #565d67;
+}

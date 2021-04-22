@@ -1,16 +1,14 @@
 import React from "react";
-// import { connect } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { LandingHome } from "./components/index";
+import { LandingHome, Banlist } from "./components/index";
 
 function Routes() {
   return (
     <div>
       <BrowserRouter>
         <Switch>
-          <Route path="/">
-            <LandingHome />
-          </Route>
+          <Route exact path="/" component={LandingHome}></Route>
+          <Route exact path="/banlist" component={Banlist}></Route>
         </Switch>
       </BrowserRouter>
     </div>

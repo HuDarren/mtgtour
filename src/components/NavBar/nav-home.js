@@ -1,19 +1,34 @@
 import React from "react";
 import "./nav-z.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="nav-container">
-      <nav className="nav-container1">
-        <div className="nav-container2">
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Gameplay</a>
-          <a href="/">Events</a>
+    <nav className="navbar">
+      <Link className="nav-home" to="/">
+        MTGTOUR
+      </Link>
+      <Link className="nav-text" to="/">
+        Tournaments
+      </Link>
+      <Link className="nav-text" to="/banlist">
+        Gameplay
+      </Link>
+      <div className="dropdown">
+        <button className="dropdown-button">
+          Ranks
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div className="dropdown-content">
+          <Link className="dropdown-contenta" to="/">
+            Singles
+          </Link>
+          <Link className="dropdown-contenta" to="/">
+            Doubles
+          </Link>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
 

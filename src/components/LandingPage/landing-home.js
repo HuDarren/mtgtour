@@ -1,10 +1,10 @@
 import React from "react";
-import Rank from "../Rank/rank-home";
+import RankSingle from "../Rank/rank-single";
 
 function LandingHome() {
   return (
     <div>
-      <Rank />
+      <RankSingle />
     </div>
   );
 }

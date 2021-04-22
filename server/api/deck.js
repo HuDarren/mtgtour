@@ -6,9 +6,10 @@ module.exports = router;
 router.get("/", async (req, res, next) => {
   try {
     const decks = await Deck.findAll({
-      attributes: ["id", "name", "image", "points", "tournPlayed"],
-      include: { model: Player },
+      include: [{ model: Player }],
+      order: [["points", "DESC"]],
     });
+
     res.json(decks);
   } catch (err) {
     next(err);
