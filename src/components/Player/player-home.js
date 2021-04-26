@@ -6,29 +6,37 @@ import "./player.css";
 function PlayerHome(props) {
   React.useEffect(() => {
     props.fetchPlayer(props.match.params.id);
-  }, [props.match.params.id]);
+  }, []);
 
   let player = props.player[0];
 
-  function renderData() {
-    return player.decks.map((entry, index) => {
-      return (
-        <div>
-          <img src={entry.image}></img>
-          <div>{entry.commander}</div>
-          <div>{entry.points}</div>
-        </div>
-      );
-    });
-  }
-
   return (
-    <div className="player-container">
-      <div>
-        <img src={player.image}></img>
-        <div>{player.name}</div>
+    <div className="landingA-container">
+      <div className="landingA-title">
+        <div className="landingA-contentA">
+          {props.player.length ? (
+            <div>
+              <img className="landingA-image" src={player.image}></img>
+              <div className="landingA-title">{player.name}</div>
+            </div>
+          ) : null}
+        </div>
       </div>
-      <div>{renderData()}</div>
+      <div>
+        {props.player.length && player.decks.length ? (
+          <div class="containerA gridA centerA">
+            {props.player[0].decks.map((deck) => {
+              return (
+                <div className="landingA-content">
+                  <img className="landingA-image" src={deck.image}></img>
+                  <div className="landingA-text">{deck.commander}</div>
+                  <div className="landingA-text">{deck.points}</div>
+                </div>
+              );
+            })}
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

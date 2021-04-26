@@ -1,3 +1,75 @@
-.player-container {
+.landingA-container {
+  margin-top: 40px;
   color: white;
+}
+
+.landingA-title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.landingA-titleA {
+  padding: 1rem 1rem 1rem 1rem;
+  font-size: 32px;
+  line-height: 36px;
+  font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto",
+    "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin-top: 2%;
+}
+
+.landingA-contentA {
+  /* width: 15%;
+  height: 20%; */
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 180px;
+  padding: 1rem;
+}
+
+.containerA {
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 1rem 1rem;
+}
+
+.gridA {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.centerA {
+  text-align: center;
+  margin: auto;
+}
+
+.landingA-content {
+  width: 15%;
+  height: 20%;
+  min-width: 150px;
+  min-height: 200px;
+  max-width: 180px;
+  padding: 1rem;
+}
+
+.landingA-image {
+  margin-top: 5%;
+  min-width: 150px;
+  min-height: 120px;
+  width: 100%;
+  height: 100%;
+}
+
+.landingA-text {
+  margin-top: 5%;
+  font-size: 13px;
+  font-weight: 500;
 }
