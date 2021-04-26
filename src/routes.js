@@ -6,6 +6,7 @@ import {
   RankDoubles,
   Banlist,
   PlayerInfo,
+  TournamentHome,
 } from "./components/index";
 
 function Routes() {
@@ -18,6 +19,7 @@ function Routes() {
           <Route exact path="/doubles" component={RankDoubles}></Route>
           <Route exact path="/player/:id" component={PlayerInfo}></Route>
           <Route exact path="/banlist" component={Banlist}></Route>
+          <Route exact path="/tournament" component={TournamentHome}></Route>
         </Switch>
       </BrowserRouter>
     </div>
