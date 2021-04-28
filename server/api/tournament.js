@@ -14,3 +14,19 @@ router.get("/", async (req, res, next) => {
     next(err);
   }
 });
+
+router.get("/:id", async (req, res, next) => {
+  try {
+    const tournId = req.params.id;
+    const tourn = await Tournament.findAll({
+      where: {
+        id: tournId,
+      },
+      include: [{ model: Deck }],
+      order: [["id", "DESC"]],
+    });
+    res.json(tourn);
+  } catch (err) {
+    next(err);
+  }
+});
