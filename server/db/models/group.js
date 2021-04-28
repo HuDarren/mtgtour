@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const db = require("../db");
 
 const Group = db.define("groups", {
-  group: {
+  bracket: {
     type: Sequelize.TEXT,
   },
   wins: {

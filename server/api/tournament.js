@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Tournament, Deck } = require("../db/models");
+const { Tournament, Deck, Group } = require("../db/models");
 module.exports = router;
 
 // get all user information
@@ -18,12 +18,13 @@ router.get("/", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const tournId = req.params.id;
-    const tourn = await Tournament.findAll({
+    const tourn = await Group.findAll({
       where: {
-        id: tournId,
+        tournamentId: tournId,
       },
-      include: [{ model: Deck }],
-      order: [["id", "DESC"]],
+      include: [{ model: Deck, include: [{ model: Tournament }] }],
+
+      order: [["bracket", "DESC"]],
     });
     res.json(tourn);
   } catch (err) {
