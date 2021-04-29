@@ -15,22 +15,26 @@ function GroupHome(props) {
   console.log("props", props.tournament);
 
   function renderTableData() {
-    return props.tournament.map((deck, index) => {
-      return (
-        <tr key={index}>
-          <td>{index + 1}</td>
-          <img className="rankImage" src={deck.deck.image}></img>
-          <td>{deck.deck.commander}</td>
-          <td>{deck.points}</td>
-        </tr>
-      );
-    });
+    if (props.tournament.length && props.tournament[0].deck) {
+      return props.tournament.map((deck, index) => {
+        return (
+          <tr key={index}>
+            <td>{index + 1}</td>
+            <img className="rankImage" src={deck.deck.image}></img>
+            <td>{deck.deck.commander}</td>
+            <td>{deck.points}</td>
+          </tr>
+        );
+      });
+    } else {
+      <div></div>;
+    }
   }
 
   return (
     <div>
       <div className="label-container">
-        <div className="label">{props.tournament[0].deck.tournament.name}</div>
+        <div className="label">Tournament</div>
       </div>
       <table id="players">
         <tbody className="player-content">

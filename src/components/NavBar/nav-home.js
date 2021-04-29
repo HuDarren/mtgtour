@@ -8,12 +8,23 @@ function Navbar() {
       <Link className="nav-home" to="/">
         MTGTOUR
       </Link>
-      <Link className="nav-text" to="/">
-        Tournaments
-      </Link>
-      <Link className="nav-text" to="/banlist">
-        Gameplay
-      </Link>
+      <div className="dropdown">
+        <button className="dropdown-button">
+          Gameplay
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div className="dropdown-content">
+          <Link className="dropdown-contenta" to="/tournament">
+            Tournaments
+          </Link>
+          <Link className="dropdown-contenta" to="/banlist">
+            Rules
+          </Link>
+          <Link className="dropdown-contenta" to="/">
+            About
+          </Link>
+        </div>
+      </div>
       <div className="dropdown">
         <button className="dropdown-button">
           Ranks

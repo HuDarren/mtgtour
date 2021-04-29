@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchAllDeck } from "../../store";
+import { Link } from "react-router-dom";
 import "./rank.css";
 
 function RankSingle(props) {
@@ -17,7 +18,7 @@ function RankSingle(props) {
 
   function renderTableData() {
     return props.deck.map((entry, index) => {
-      const { image, commander, points, TournPlayed, player } = entry;
+      const { image, commander, points, TournPlayed, player, id } = entry;
       return (
         <tr key={index}>
           <img className="rankImage" src={image}></img>
@@ -25,7 +26,11 @@ function RankSingle(props) {
           <td>{commander}</td>
           <td>{points}</td>
           <td>{TournPlayed}</td>
-          <td>{player.name}</td>
+          <td>
+            <Link className="button" to={`/player/${id}`}>
+              {player.name}
+            </Link>
+          </td>
         </tr>
       );
     });

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchAllTournament } from "../../store";
+import { Link } from "react-router-dom";
 import "./tour.css";
 
 function TourHome(props) {
@@ -19,12 +20,16 @@ function TourHome(props) {
 
   function renderTableData() {
     return props.tournament.map((entry, index) => {
-      const { date, name, description, decks, image } = entry;
+      const { date, name, description, decks, image, id } = entry;
       return (
         <tr key={index}>
           <td>{date.slice(0, 10)}</td>
           <td>{name}</td>
-          <td>{description}</td>
+          <td>
+            <Link className="button" to={`/tournament/${id}`}>
+              {description}
+            </Link>
+          </td>
           <td>{decks.length}</td>
           <img className="rankImage" src={image}></img>
         </tr>

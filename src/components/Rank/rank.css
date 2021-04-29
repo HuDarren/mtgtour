@@ -54,3 +54,8 @@
   color: #ddd;
   background-color: #565d67;
 }
+
+.button {
+  text-decoration: none;
+  color: white;
+}
