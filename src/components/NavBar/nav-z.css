@@ -29,6 +29,7 @@
 .dropdown {
   float: right;
   overflow: hidden;
+  margin-right: 3%;
 }
 
 .dropdown .dropdown-button {

@@ -8,6 +8,7 @@ import {
   PlayerInfo,
   TournamentHome,
   GroupHome,
+  PlayerSingle,
 } from "./components/index";
 
 function Routes() {
@@ -22,6 +23,7 @@ function Routes() {
           <Route exact path="/banlist" component={Banlist}></Route>
           <Route exact path="/tournament" component={TournamentHome}></Route>
           <Route exact path="/tournament/:id" component={GroupHome}></Route>
+          <Route exact path="/deck/:id" component={PlayerSingle}></Route>
         </Switch>
       </BrowserRouter>
     </div>

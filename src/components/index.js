@@ -5,3 +5,4 @@ export { default as PlayerInfo } from "./Player/player-home";
 export { default as Banlist } from "./Gameplay/banlist";
 export { default as TournamentHome } from "./Tournament/tour-home";
 export { default as GroupHome } from "./Group/group-home";
+export { default as PlayerSingle } from "./Player/player-single";
