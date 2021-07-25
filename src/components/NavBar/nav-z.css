@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #181c25;
+  /* background-color: #181c25; */
 }
 
 .nav-home {
@@ -27,7 +27,7 @@
 }
 
 .dropdown {
-  float: right;
+  margin-left: 45%;
   overflow: hidden;
   margin-right: 3%;
 }
@@ -41,6 +41,7 @@
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
+  font-size: 30px;
 }
 
 .dropdown-content {
