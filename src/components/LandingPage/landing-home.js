@@ -8,27 +8,23 @@ function LandingHome(props) {
     props.fetchAllPlayer();
   }, []);
 
-  console.log(props.player);
-
   return (
-    <div className="landingA-container">
-      <div class="containerA gridA centerA">
-        {props.player.length ? (
-          <div className="landingA-content">
-            {props.player.map((heros) => {
-              return (
-                <div className="landingA-content">
-                  <img
-                    alt="img"
-                    src={heros.image}
-                    className="landingA-image"></img>
-                  <div className="landingA-text">{heros.name}</div>
-                </div>
-              );
-            })}
-          </div>
-        ) : null}
-      </div>
+    <div className="landing-container">
+      {props.player.length ? (
+        <div class="container grid center">
+          {props.player.map((heros) => {
+            return (
+              <div className="landing-content">
+                <img
+                  alt="img"
+                  src={heros.image}
+                  className="landing-image"></img>
+                <div className="landing-text">{heros.name}</div>
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   );
 }

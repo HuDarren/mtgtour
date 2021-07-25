@@ -48,6 +48,7 @@ function Banlist() {
           <p>FastBond</p>
           <p>Gifts Ungiven</p>
           <p>Griselbrand</p>
+          <p>Hullbreacher</p>
           <p>Karakas</p>
           <p>Library of Alexandria</p>
           <p>Limited Resource</p>

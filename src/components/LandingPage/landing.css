@@ -1,46 +1,49 @@
-.landingA-container {
-  background-color: #fdebd2;
+.landing-container {
+  background-color: #2f096d;
 }
 
-.landingA-content {
+.landing-content {
   width: 15%;
   height: 20%;
   min-width: 150px;
-  min-height: 200px;
-  max-width: 180px;
+  min-height: 250px;
+  max-width: 200px;
   padding: 1rem;
+  border: solid;
+  border-color: rgb(95, 93, 194);
+  margin-left: 5px;
 }
 
-.landingA-image {
+.landing-image {
   margin-top: 5%;
-  min-width: 160px;
-  min-height: 180px;
+  /* min-width: 160px; */
+  min-height: 250px;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
 }
 
-.landingA-text {
+.landing-text {
   margin-top: 5%;
-  font-size: 13px;
+  font-size: 100%;
   font-weight: 500;
+  color: aliceblue;
 }
 
-.containerA {
+.container {
   max-width: 90%;
   margin: auto;
   overflow: hidden;
   padding: 1rem 1rem;
 }
 
-.gridA {
+.grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.centerA {
+.center {
   text-align: center;
   margin: auto;
 }
