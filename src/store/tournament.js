@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import axios from "axios";
 
 const GET_ALL_TOURNAMENT = "GET_ALL_TOURNAMENT";

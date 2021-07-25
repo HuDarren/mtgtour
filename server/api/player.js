@@ -18,3 +18,16 @@ router.get("/:id", async (req, res, next) => {
     next(error);
   }
 });
+
+// get all players
+
+router.get("/", async (req, res, next) => {
+  try {
+    const userData = await Player.findAll({
+      include: { model: Deck },
+    });
+    res.json(userData);
+  } catch (error) {
+    next(error);
+  }
+});
