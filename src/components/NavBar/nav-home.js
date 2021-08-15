@@ -32,25 +32,29 @@ const NavHome = ({ handleClick, isLoggedIn }) => (
           </div>
         </nav>
       ) : (
-        <nav className="navbar">
-          <div className="dropdown">
-            <button className="dropdown-button">
-              Magic
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div className="dropdown-content">
-              <Link className="dropdown-contenta" to="/">
-                Planewalkers
-              </Link>
-              <Link className="dropdown-contenta" to="/banlist">
-                Rules
-              </Link>
-              <Link className="dropdown-contenta" to="/login">
-                Login
-              </Link>
-            </div>
+        <header class="menu">
+          <div class="menu-wrap">
+            <img src="logo.png" class="logo-img" alt="Logo"></img>
+            <input type="checkbox" id="checkbox"></input>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Planewalkers</Link>
+                </li>
+                <li>
+                  <Link to="/banlist">Rules</Link>
+                </li>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              </ul>
+            </nav>
+
+            <label for="checkbox">
+              <i class="fa fa-bars menu-icon"></i>
+            </label>
           </div>
-        </nav>
+        </header>
       )}
     </nav>
   </div>
