@@ -35,6 +35,7 @@ function LandingHome(props) {
         </div>
       ) : null} */}
       <div>Nothing</div>
+      <div>Okay dude</div>
       {/* <div>{props.player[0].name}</div> */}
     </div>
   );
