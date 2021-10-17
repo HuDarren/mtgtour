@@ -23,7 +23,10 @@ function PlayerHome(props) {
         </div>
       </div>
       <div>
-        {props.player.length && player.decks.length ? (
+        {props.player &&
+        props.player.decks &&
+        Array.isArray(props.player) &&
+        Array.isArray(props.player.decks) ? (
           <div class="containerA gridA centerA">
             {props.player[0].decks.map((deck) => {
               return (

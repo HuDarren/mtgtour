@@ -26,6 +26,7 @@ class Routes extends Component {
     return (
       <Switch>
         <Route path="/login" component={Login} />
+        <Route exact path="/player/:id" component={PlayerInfo}></Route>
 
         {isLoggedIn && (
           <Switch>
