@@ -3,19 +3,18 @@ import { connect } from "react-redux";
 import { fetchAllPlayer } from "../../store";
 import { Link } from "react-router-dom";
 import "./landing.css";
+import { getByDisplayValue } from "@testing-library/react";
 
 function LandingHome(props) {
-  // const [count, setCount] = React.useState(0);
+  // const [player, setPlayer] = React.useState(player);
 
   React.useEffect(() => {
     props.fetchAllPlayer();
   }, []);
 
-  console.log("test", props.player);
-
   return (
     <div className="landing-container">
-      {/* {props.player.length ? (
+      {props && props.player.length > 1 && Array.isArray(props.player) ? (
         <div class="container grid center">
           {props.player.map((heros) => {
             return (
@@ -33,10 +32,7 @@ function LandingHome(props) {
             );
           })}
         </div>
-      ) : null} */}
-      <div>Nothing</div>
-      <div>Okay dude</div>
-      {/* <div>{props.player[0].name}</div> */}
+      ) : null}
     </div>
   );
 }
